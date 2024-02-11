@@ -1,6 +1,7 @@
 # 📺🍿 Personalisation for (Public) Media (INFOMPPM) 📡🎬
 Welcome to the tutorials repository for the Personalisation for (Public) Media course. Here you will find all the material for our seminars. This repository will be updated every week, so say tuned (and git pull often)!
 
+# Course content
 Recommender systems are an integral part of our daily media consumption: they compile playlists on Spotify, suggest movies on Netflix, and select news content for personalized social media feeds on platforms like Facebook or Twitter. In the age of information overload, recommender systems provide orientation and assist users in making choices. Through data collection and statistical modeling, the underlying algorithms identify and present content that is considered most "relevant" to users. 
 
 However, recommender systems are not objective observers or advisors; they carry specific norms and values that their creators consciously and unconsciously impart during the development and deployment of algorithms. These factors and their social impact are highly context-dependent. For example, recommender systems are often at the center of discussions about political polarization on digital platforms and have been associated with the reinforcement of "tunnel vision" among users by leading them into content funnels that may reduce exposure to diversity. 
