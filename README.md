@@ -14,7 +14,8 @@ This course centers on the question: how can recommender systems implement publi
 This course approaches recommender systems from a humanities perspective; students are challenged to critically engage with data-driven technology with an explicit focus on values. It is less "hardcore" technical but decidedly interdisciplinary with a firm grounding in humanities/media studies. The course has three pillars: 
 1. conceptual
 2. design,
-3. technical. 
+3. technical
+
 Within this integrative framework, you will explore the interplay between data, technology, and (public) values.
 
 ## Overview
