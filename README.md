@@ -32,8 +32,8 @@ The activities aim to test your knowledge about the readings, get your codebook 
 In week two we will discuss the difference and connection between content-based and collaborative-filtering-based recommender systems. We will introduce techniques for generating recommendations with relevant data in more detail. This entails a discussion of content features (what is available and what to select) as well as different statistical methods, such as cosine similarities, Jaccard distance, and k-means clustering. We will also address data sparsity.
 
 During the seminar, we will focus on the following topics:
-•	Similarity measures
-•	Clustering
+1. Similarity measures
+2. Clustering
 
 
 ## Authors
