@@ -19,7 +19,7 @@ credentials:
       email: j.vanboheemen@uu.nl
       logged_in: False # Will be managed automatically
       name: Jelte van Boheemen
-      password: doemijmaarclub-mate # Will be hashed automatically            
+      password: ikbengekopkroketjes # Will be hashed automatically            
 cookie:
   expiry_days: 30
   key: some_signature_key # Must be string
