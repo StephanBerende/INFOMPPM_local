@@ -1,7 +1,5 @@
 import streamlit as st
 import pandas as pd
-from preferences import get_preferences
-
 
 # Configure the layout of the Streamlit page to use a wide format for more space
 st.set_page_config(page_title = "Home Page", 
@@ -10,12 +8,20 @@ st.set_page_config(page_title = "Home Page",
 )
 st.sidebar.header("Select the page above.")
 
+# Change to your local path
 df = pd.read_csv(r'C:\Users\Gebruiker\Documents\CODE\Master\Personalisation\INFOMPPM_local\Individual_Assignment\data\combined_dataframe.csv', sep=';', encoding='latin-1', low_memory=False)
 
-st.title("User Profile", anchor= False)
+# Get preferences from User Profile
+if ('sport_preference' in st.session_state) and ('arts_preference' in st.session_state) and ('comedy_preference' in st.session_state):
+    sport_preference = st.session_state.sport_preference
+    arts_preference = st.session_state.arts_preference
+    comedy_preference = st.session_state.comedy_preference
+else:
+    sport_preference = 'Moderately interested'
+    arts_preference = 'Moderately interested'
+    comedy_preference = 'Moderately interested'
 
-st.write("Are your reccomendations not what you expected? Change your preferences below by indicating how interested you are in each category.")
-
+# Score for each category
 preference_options = {
     'Not interested': 0,
     'Mildly interested': 1,
@@ -24,23 +30,10 @@ preference_options = {
     'Extremely Interested': 4
 }
 
-sport_preference = st.select_slider(
-    'Sports',
-    options=list(preference_options.keys()))
-
-arts_preference = st.select_slider(
-    'Arts',
-    options=list(preference_options.keys()))
-
-comedy_preference = st.select_slider(
-    'Comedy',
-    options=list(preference_options.keys()))
-
 # Convert preferences to integers
 sport_preference = preference_options[sport_preference]
 arts_preference = preference_options[arts_preference]
-comedy_preference = preference_options[comedy_preference]\
-
+comedy_preference = preference_options[comedy_preference]
 
 def calculate_preferences(sport_preference, arts_preference, comedy_preference):
     # Calculate total score
@@ -62,8 +55,6 @@ def calculate_preferences(sport_preference, arts_preference, comedy_preference):
     num_sport_movies = int(round((sport_score) * 10))
     num_arts_movies = int(round((arts_score) * 10))
     num_comedy_movies = int(round((comedy_score) * 10))
-
-    st.write("From now on, your recommendations are made up as follows: Sports (", sport_score * 100, "%) , Arts (", arts_score * 100, "%) , Comedy(", comedy_score * 100, "%)" )
     
     # Filter the dataframe to get movies for each category
     sport_movies = df[df['category'] == 'Sports'].sample(n=num_sport_movies)
@@ -76,7 +67,7 @@ def calculate_preferences(sport_preference, arts_preference, comedy_preference):
     
     return selected_movies
     
-df_start = calculate_preferences(sport_preference, arts_preference, comedy_preference)
+df_start = calculate_preferences(sport_preference, arts_preference,comedy_preference)
 
 
 st.title("Recommended Just For You:", anchor= False)
@@ -101,7 +92,7 @@ elif option == 'What Are My Friends Watching?':
 elif option == 'What\'s Popular?':
     df_rec = df.sample(n=9, random_state=4)
 elif option == 'More...': 
-    df_rec = df.sample(n=9, random_state=5)
+    st.switch_page(r"pages\2_Recommendation_Techniques.py")
 
 # Calculate the number of rows needed based on the number of items in df_rec
 num_rows = (len(df_rec) + 4) // 5
