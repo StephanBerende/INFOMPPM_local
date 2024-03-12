@@ -38,6 +38,19 @@ During the seminar, we will focus on the following topics:
 ### Week 03
 During the seminar, we will critically discuss different metrics for (public) values (e.g., diversity). What is possible? Where do current propositions fall short? How would you operationalize values? We then explore ways for how to enrich our data for more flexibility in experimenting with values and generating “better” recommendations. 
 
+### Week 04
+...
+
+### Week 05
+...
+
+### Week 06
+...
+
+### Week 07
+...
+
+
 
 ## Authors
-This repository is maintained by [Erik Hekman](https://www.linkedin.com/in/erikhekman), [David Gauthier](https://www.uu.nl/staff/DGauthier), and [Dennis Nguyen](https://www.linkedin.com/in/dennisnguyenphd/)
+This repository is maintained by [Erik Hekman](https://www.linkedin.com/in/erikhekman), [David Gauthier](https://www.uu.nl/staff/DGauthier), [Dennis Nguyen](https://www.linkedin.com/in/dennisnguyenphd/), and [Jelte van Boheemen](https://www.uu.nl/medewerkers/JvanBoheemen)
